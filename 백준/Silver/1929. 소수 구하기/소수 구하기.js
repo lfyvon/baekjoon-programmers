@@ -4,12 +4,12 @@ let primeList = [...Array(n + 1)].map((x, i) => i);
 primeList[1] = 0;
 let result = [];
 
-for(let i = m; i <= n; i++){
-    if(primeList[i] === 0) continue;
-    for(let j = 2; j <= Math.sqrt(i); j++){
-        if(i % j === 0){
-            primeList[i] = 0;
-            break;
+for(let i = 2; i * i <= n; i++){
+    if(primeList[i]){
+        for(let j = i * i; j <= n; j += i){
+            if(j % i === 0){
+                primeList[j] = 0;
+            }
         }
     }
 }
