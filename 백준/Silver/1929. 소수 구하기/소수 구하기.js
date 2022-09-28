@@ -7,9 +7,7 @@ let result = [];
 for(let i = 2; i * i <= n; i++){
     if(primeList[i]){
         for(let j = i * i; j <= n; j += i){
-            if(j % i === 0){
-                primeList[j] = 0;
-            }
+            primeList[j] = 0;
         }
     }
 }
