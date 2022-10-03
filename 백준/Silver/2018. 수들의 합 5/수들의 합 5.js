@@ -5,7 +5,7 @@ let start = 1;
 let end = 1;
 let sum = 1;
 let count = 1;
-let end_max = parseInt(n / 2) + 1
+let end_max = Math.ceil(n / 2);
 
 while(start !== end_max){
     if(sum === n){
