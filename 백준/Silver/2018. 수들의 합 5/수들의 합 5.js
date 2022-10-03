@@ -5,8 +5,9 @@ let start = 1;
 let end = 1;
 let sum = 1;
 let count = 1;
+let end_max = parseInt(n / 2) + 1
 
-while(end !== n){
+while(start !== end_max){
     if(sum === n){
         count++;
         end++;
@@ -18,6 +19,7 @@ while(end !== n){
         end++;
         sum += end;
     }
+
 }
 
 console.log(count);
