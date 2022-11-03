@@ -1,5 +1,4 @@
 def solution(numbers, direction):
-    answer = []
     num = 0
     if direction == "right":
         num = numbers.pop(-1)
