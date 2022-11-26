@@ -2,7 +2,7 @@ const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('
 
 const n = parseInt(input[0]);
 const video = input.slice(1).map(el => el.trim().split('').map(v => parseInt(v)));
-const result = [];
+let result = '';
 
 function recursion(x, y, n){
     let count = 0;
@@ -11,21 +11,21 @@ function recursion(x, y, n){
             if(video[i][j]) count++;
         }
     }
-
+    
     if(count === 0){
-        result.push(0);
+        result += '0';
     } else if(count === n * n){
-        result.push(1);
+        result += '1';
     } else{
-        result.push('(');
+        result += '(';
         recursion(x, y, n / 2);
         recursion(x, y + n / 2, n / 2);
         recursion(x + n / 2, y, n / 2);
         recursion(x + n / 2, y + n / 2, n / 2);
-        result.push(')');
+        result += ')';
     }
 }
 
 recursion(0, 0, n);
 
-console.log(result.join(''));
+console.log(result);
