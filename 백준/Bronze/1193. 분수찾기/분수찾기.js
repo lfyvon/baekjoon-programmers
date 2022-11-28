@@ -1,24 +1,21 @@
-const x = parseInt(require('fs').readFileSync('/dev/stdin').toString());
+let x = parseInt(require('fs').readFileSync('/dev/stdin').toString());
 
-let f = x;
-let count = 0;
+let c = 0;
 let n = 0;
 let d = 0;
-while(f > 0){
-    if(f > count){
-        f -= count;
-        count++;
-    } else{
-        break;
-    }
+while(true){
+    if(x > c){
+        x -= c;
+        c++;
+    } else break;
 }
 
-if(count % 2 == 0){
-    n = f;
-    d = count + 1 - n;
+if(c % 2 == 0){
+    n = x;
+    d = c + 1 - n;
 } else{
-    d = f;
-    n = count + 1 - f;
+    d = x;
+    n = c + 1 - x;
 }
 
 console.log(n + "/"+ d);
