@@ -9,6 +9,5 @@ def solution(letter):
     letter = letter.split(' ')
     answer = ''
     for l in letter:
-        if l != ' ':
-            answer += morse[l]
+        answer += morse[l]
     return answer
