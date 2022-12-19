@@ -5,22 +5,22 @@ const paper = input.slice(1).map(el => el.split(" ").map(v => parseInt(v)));
 let white = 0;
 let blue = 0;
 
-const recursion = (x, y, num) => {
+const recursion = (x, y, n) => {
     let count = 0;
-    for(let i = x; i < x + num; i++){
-        for(let j = y; j < y + num; j++){
+    for(let i = x; i < x + n; i++){
+        for(let j = y; j < y + n; j++){
             count += paper[i][j];
         }
     }
     if(count === 0){
         white++;
-    } else if(count === num * num){
+    } else if(count === n * n){
         blue++;
     } else {
-        recursion(x, y, num / 2);
-        recursion(x, y + num / 2, num / 2);
-        recursion(x + num / 2, y, num / 2);
-        recursion(x + num / 2, y + num / 2, num / 2);
+        recursion(x, y, n / 2);
+        recursion(x, y + n / 2, n / 2);
+        recursion(x + n / 2, y, n / 2);
+        recursion(x + n / 2, y + n / 2, n / 2);
     }
 }
 
