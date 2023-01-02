@@ -11,7 +11,6 @@ function solution(clothes) {
         console.log(costume)
     }
     let count = [...costume.values()].reduce((a, b) => a * (b + 1), 1) - 1;
-    if(count < 0) count = 0;
     answer = count;
     return answer;
 }
