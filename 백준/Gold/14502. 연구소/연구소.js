@@ -48,7 +48,8 @@ const dfs = (count) => {
                 arr[i][j] = map[i][j];
             }
         }
-        result = result > countSafeZones(arr) ? result : countSafeZones(arr);
+        let c = countSafeZones(arr)
+        result = result > c ? result : c;
         return;
     }
 
