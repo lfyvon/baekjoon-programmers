@@ -1,6 +1,7 @@
 const input = require('fs').readFileSync('/dev/stdin').toString().split('\n');
 const [N, M] = input[0].split(' ').map(Number);
 const map = input.slice(1).map(el => el.split(' ').map(Number));
+let arr = Array.from(Array(N), () => Array(M));
 const dx = [-1, 1, 0, 0];
 const dy = [0, 0, -1, 1];
 let result = 0;
@@ -42,7 +43,6 @@ const countSafeZones = (arr) => {
 
 const dfs = (count) => {
     if(count === 3){
-        let arr = Array.from(Array(N), () => Array(M));
         for(let i = 0; i < N; i++){
             for(let j = 0; j < M; j++){
                 arr[i][j] = map[i][j];
