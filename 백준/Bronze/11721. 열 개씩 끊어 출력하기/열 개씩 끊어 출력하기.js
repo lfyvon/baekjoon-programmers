@@ -1,11 +1,7 @@
-const input = require('fs').readFileSync('/dev/stdin').toString();
+let input = require('fs').readFileSync('/dev/stdin').toString();
 let result = [];
-let str = '';
-for(let i = 0; i < input.length; i++){
-    str += input[i];
-    if(i % 10 === 9 || i === input.length - 1){
-        result.push(str);
-        str = "";
-    }
+while(input.length){
+    result.push(input.slice(0, 10));
+    input = input.slice(10);
 }
 console.log(result.join('\n'));
