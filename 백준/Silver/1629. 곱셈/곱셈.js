@@ -14,4 +14,4 @@ function pow(a, n){
   }
   
   
-  console.log(parseInt(pow(a ,b)))
+  console.log(pow(a ,b).toString());
