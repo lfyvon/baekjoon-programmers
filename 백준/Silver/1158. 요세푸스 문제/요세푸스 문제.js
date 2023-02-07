@@ -4,9 +4,9 @@ let count = 0;
 const result = [];
 
 while(queue.length){
-    count++;
-    const num = queue.shift();
-    count % k === 0 ? result.push(num) : queue.push(num);
+    count = (count + k - 1) % queue.length;
+    result.push(queue[count]);
+    queue.splice(count, 1);
 }
 
 console.log('<' + result.join(', ') + '>');
