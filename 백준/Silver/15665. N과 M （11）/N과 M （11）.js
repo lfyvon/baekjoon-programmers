@@ -5,17 +5,17 @@ const visited = new Array(n + 1).fill(0);
 const seq = [];
 const result = [];
 
-const dfs = (count) => {
-    if(m === count){
+const dfs = () => {
+    if(m === seq.length){
         result.push(seq.join(' '));
     } else{
         for(let i = 0; i < n; i++){
             seq.push(arr[i]);
-            dfs(count + 1);
+            dfs();
             seq.pop();
         }
     }
 }
 
-dfs(0);
+dfs();
 console.log([...new Set(result)].join('\n'));
