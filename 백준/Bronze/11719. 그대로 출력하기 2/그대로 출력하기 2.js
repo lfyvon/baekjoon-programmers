@@ -1,2 +1,1 @@
-const input = require('fs').readFileSync('/dev/stdin').toString();
-console.log(input);
+console.log(require('fs').readFileSync('/dev/stdin').toString());
