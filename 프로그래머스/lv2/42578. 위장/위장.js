@@ -8,7 +8,6 @@ function solution(clothes) {
         } else{
             costume.set(type, 1)
         }
-        console.log(costume)
     }
     let count = [...costume.values()].reduce((a, b) => a * (b + 1), 1) - 1;
     answer = count;
