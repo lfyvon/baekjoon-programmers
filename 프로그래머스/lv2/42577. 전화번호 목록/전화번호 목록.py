@@ -5,6 +5,6 @@ def solution(phone_book):
 
     for p in phone_book:
         for i in range(1, len(p)):
-            if p[:i] in hash and p[:i] != p:
+            if p[:i] in hash:
                 return False
     return True
