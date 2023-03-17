@@ -5,7 +5,6 @@ function solution(numbers, target) {
             if(sum === target){
                 answer++;
             }
-            return;
         } else{
             dfs(i + 1, sum + numbers[i]);
             dfs(i + 1, sum - numbers[i]);
