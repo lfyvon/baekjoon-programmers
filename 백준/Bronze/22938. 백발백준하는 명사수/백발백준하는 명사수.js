@@ -1,0 +1,2 @@
+const [[x1, y1, r1], [x2, y2, r2]] = require('fs').readFileSync('/dev/stdin').toString().split('\n').map(el => el.split(' ').map(Number));
+console.log((x2 - x1) ** 2 + (y2 - y1) ** 2 < (r1 + r2) ** 2 ? "YES" : "NO");
