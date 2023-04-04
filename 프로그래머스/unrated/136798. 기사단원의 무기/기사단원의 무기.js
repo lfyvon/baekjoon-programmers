@@ -1,16 +1,13 @@
 function solution(number, limit, power) {
     var answer = 0;
-    const arr = [1];
-    for(let i = 2; i <= number; i++){
+    for(let i = 1; i <= number; i++){
         let count = 0;
-        for(let j = 1; j <= Math.sqrt(i); j++){
-            if(i % j === 0) count++;
+        for(let j = 1; j * j <= i; j++){
+            if(i % j === 0) count += 2;
+            if(j * j === i) count--;
         }
-        count *= 2;
-        if(Number.isInteger(Math.sqrt(i))) count--;
         if(count > limit) count = power;
-        arr.push(count);
+        answer += count;
     }
-    answer = arr.reduce((a, b) => a + b);
     return answer;
 }
