@@ -3,7 +3,7 @@ let result = 0;
 if(a < 0){
     result += -a * c;
     a = 0;
+    result += d;
 }
-if(a === 0) result += d;
 result += (b - a) * e;
 console.log(result);
