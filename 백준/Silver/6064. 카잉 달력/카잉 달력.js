@@ -1,5 +1,6 @@
-const [T, ...input] = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
-const data = input.map(v => v.split(' ').map(Number));
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+const t = Number(input[0]);
+const data = input.slice(1).map(v => v.split(' ').map(Number));
 
 const getGCD = (a, b) => {
   let x = Math.max(a, b);
