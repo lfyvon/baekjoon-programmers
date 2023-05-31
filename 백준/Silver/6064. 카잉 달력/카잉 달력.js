@@ -1,7 +1,7 @@
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 const t = Number(input[0]);
-const data = input.slice(1).map(v => v.split(' ').map(Number));
-
+const cal = input.slice(1).map(v => v.split(' ').map(Number));
+const result = [];
 const getGCD = (a, b) => {
   let x = Math.max(a, b);
   let y = Math.min(a, b);
@@ -14,16 +14,17 @@ const getGCD = (a, b) => {
   return x;
 };
 
-const output = data.map(([M, N, x, y]) => {
-  const lcm = M * N / getGCD(M, N);
-  let year = -1;
-  for (let i = x; i <= lcm; i += M) {
-    if ((i - 1) % N + 1 === y) {
-      year = i;
-      break;
+for(let i = 0; i < t; i++){
+    const [m, n, x, y] = cal[i];
+    const lcm = m * n / getGCD(m, n);
+    let year = -1;
+    for (let j = x; j <= lcm; j += m) {
+        if ((j - 1) % n + 1 === y) {
+            year = j;
+            break;
+        }
     }
-  }
-  return year;
-});
+    result.push(year);
+}
 
-console.log(output.join('\n'));
+console.log(result.join('\n'));
