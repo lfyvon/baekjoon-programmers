@@ -1,10 +1,10 @@
 # [level 0] 두 수의 곱 - 120804 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120804?language=java) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120804?language=csharp) 
 
 ### 성능 요약
 
-메모리: 74.9 MB, 시간: 0.02 ms
+메모리: 31.4 MB, 시간: 0.17 ms
 
 ### 구분
 
