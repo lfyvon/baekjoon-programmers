@@ -13,23 +13,16 @@ for(let i = 0; i < n; i++){
     }
 }
 
-const bfs = (startX, startY) => {
-    const queue = [];
-    queue.push([startX, startY]);
-    visited[startX][startY] = 1;
+const dfs = (x, y) => {
+    visited[x][y] = 1;
+    for(let i = 0; i < 4; i++){
+        let posX = x + dx[i];
+        let posY = y + dy[i];
 
-    while(queue.length){
-        const [x, y] = queue.shift();
-        for(let i = 0; i < 4; i++){
-            let posX = x + dx[i];
-            let posY = y + dy[i];
-
-            if(posX < 0 || posX >= n || posY < 0 || posY >= m || campus[posX][posY] === "X" || visited[posX][posY]) continue;
-            if(campus[posX][posY] === "P") count++;
-            visited[posX][posY] = 1;
-            queue.push([posX, posY]);
-        }
+        if(posX < 0 || posX >= n || posY < 0 || posY >= m || campus[posX][posY] === "X" || visited[posX][posY]) continue;
+        if(campus[posX][posY] === "P") count++;
+        dfs(posX, posY);
     }
 }
-bfs(ix, iy);
+dfs(ix, iy);
 console.log(!count ? "TT" : count);
