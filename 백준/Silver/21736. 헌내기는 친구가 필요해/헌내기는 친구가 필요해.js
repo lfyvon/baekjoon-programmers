@@ -3,7 +3,7 @@ const [n, m] = input[0].split(" ").map(Number);
 const campus = input.slice(1).map(el => el.trim());
 const dx = [1, 0, -1, 0];
 const dy = [0, 1, 0, -1];
-const visited = Array.from(new Array(n), () => Array(m).fill(false));
+const visited = Array.from(new Array(n), () => Array(m).fill(0));
 let [ix, iy] = [0, 0];
 let count = 0;
 
@@ -14,7 +14,7 @@ for(let i = 0; i < n; i++){
 }
 
 const dfs = (x, y) => {
-    visited[x][y] = true;
+    visited[x][y] = 1;
     if(campus[x][y] === "P") count++;
     for(let i = 0; i < 4; i++){
         let posX = x + dx[i];
