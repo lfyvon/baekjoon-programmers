@@ -16,7 +16,6 @@ const bfs = (startX, startY) => {
     const queue = [];
     queue.push([startX, startY]);
     visited[startX][startY] = 0;
-    // let idx = 0;
     while(queue.length){
         const [x, y] = queue.shift();
         for(let i = 0; i < 4; i++){
