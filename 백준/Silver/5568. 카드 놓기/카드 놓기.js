@@ -4,6 +4,7 @@ const result = new Set();
 const dfs = (count, num) => {
     if(count === k){
         result.add(num);
+        return;
     }
 
     for(let i = 0; i < arr.length; i++){
