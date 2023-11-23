@@ -4,11 +4,10 @@ const rl = readline.createInterface({
     input: process.stdin,
     output: process.stdout
 });
-let input = ''
+let input = [];
 rl.on('line', function(line) {
-    input += line+'\n';
+    input.push(line.split(' ').map(Number));
 }).on('close',function (){
-    input = input.split('\n').map(el => el.split(" ").map(Number))
     const [n, m] = input[0];
     const parent = Array(n).fill().map((v, i)=> i);
     const result = [];
