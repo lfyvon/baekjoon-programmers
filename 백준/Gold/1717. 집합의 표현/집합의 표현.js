@@ -9,7 +9,7 @@ rl.on('line', function(line) {
     input.push(line.split(' ').map(Number));
 }).on('close',function (){
     const [n, m] = input[0];
-    const parent = Array(n).fill().map((v, i)=> i);
+    const parent = Array(n + 1).fill().map((v, i)=> i);
     const result = [];
 
     const find = (x) => {
