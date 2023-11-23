@@ -33,7 +33,7 @@ rl.on('line', function(line) {
     for(let i = 1; i <= m; i++){
         const [op, a, b] = input[i];
         if(!op){
-            merge(a, b);
+            merge(Math.min(a, b), Math.max(a, b));
         } else{
             result.push(isUnion(a, b) ? "YES" : "NO");
         }
