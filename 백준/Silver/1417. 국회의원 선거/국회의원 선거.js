@@ -1,5 +1,4 @@
-const [N, ...M] = require('fs').readFileSync('/dev/stdin').toString().split('\n').map(Number);
-let A = M.shift();
+let [N, A, ...M] = require('fs').readFileSync('/dev/stdin').toString().split('\n').map(Number);
 let count = 0;
 while(true){
     const max = Math.max(...M);
