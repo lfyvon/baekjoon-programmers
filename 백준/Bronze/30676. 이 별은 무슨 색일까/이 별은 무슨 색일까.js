@@ -1,0 +1,2 @@
+const l = Number(require('fs').readFileSync('/dev/stdin').toString());
+console.log(l < 425 ? 'Violet' : l < 450 ? 'Indigo' : l < 495 ? 'Blue' : l < 570 ? 'Green' : l < 590 ? 'Yellow' : l < 620 ? 'Orange' : 'Red');
