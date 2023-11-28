@@ -14,10 +14,8 @@ while(left < right){
     }
     if(sum < 0){
         left++;
-    } else if(sum > 0){
-        right--;
     } else{
-        break;
+        right--;
     }
 }
 console.log(result.join(" "));
