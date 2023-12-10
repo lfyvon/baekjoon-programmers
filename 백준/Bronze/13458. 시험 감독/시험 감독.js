@@ -1,7 +1,7 @@
-const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(el => el.split(" ").map(Number));
-const N = input[0][0];
-const A = input[1];
-const [B, C] = input[2];
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
+const N = Number(input[0]);
+const A = input[1].split(" ").map(Number);
+const [B, C] = input[2].split(" ").map(Number);
 let result = N;
 for(let i = 0; i < N; i++){
     const res = A[i] - B;
