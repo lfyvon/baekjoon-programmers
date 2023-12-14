@@ -17,4 +17,4 @@ for(let i = 2; i < M + 2; i++){
         leftStack.push(c);
     }
 }
-console.log([...leftStack, ...rightStack.reverse()].join(""));
+console.log(leftStack.join("") + rightStack.reverse().join(""));
