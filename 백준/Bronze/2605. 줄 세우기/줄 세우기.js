@@ -3,6 +3,6 @@ const n = Number(input[0]);
 const std = input[1].split(" ").map(Number);
 let line = [1];
 for(let i = 1; i < n; i++){
-    line.splice(std[i], 0, i + 1);
+    line.splice(line.length - std[i], 0, i + 1);
 }
-console.log(line.reverse().join(" "));
+console.log(line.join(" "));
