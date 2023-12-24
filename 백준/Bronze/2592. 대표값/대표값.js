@@ -8,6 +8,6 @@ for(let i = 0; i < 10; i++){
         map.set(input[i], 1);
     }
 }
-const result = [...map];
+const mod = [...map].sort((a, b) => b[1] - a[1])[0][0];
 console.log(avg);
-console.log(result.sort((a, b) => b[1] - a[1])[0][0]);
+console.log(mod);
