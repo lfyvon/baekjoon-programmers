@@ -5,8 +5,12 @@ let j = 1;
 const result = [];
 while(i < n){
     const p = Number(input[j++]);
-    const arr = input.slice(j, j + p).map(el => el.trim().split(" ")).sort((a, b) => +b[0] - +a[0]);
-    result.push(arr[0][1]);
+    let [C, N] = input[j].split(" ");
+    for(let k = j + 1; k < j + p; k++){
+        const [cost, name] = input[k].trim().split(" ");
+        if(+cost > +C) [C, N] = [cost, name];
+    }
+    result.push(N);
     j += p;
     i++;
 }
