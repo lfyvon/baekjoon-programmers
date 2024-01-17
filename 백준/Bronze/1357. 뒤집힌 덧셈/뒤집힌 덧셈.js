@@ -1,0 +1,2 @@
+const [revX, revY] = require('fs').readFileSync('/dev/stdin').toString().trim().split(' ').map(el => Number(el.split("").reverse().join("")));
+console.log(Number((revX + revY).toString().split("").reverse().join("")));
