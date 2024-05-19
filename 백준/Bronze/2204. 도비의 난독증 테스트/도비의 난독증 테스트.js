@@ -6,8 +6,10 @@ while(true){
     if(!N) break;
     i++;
     let arr = input.slice(i, i + N).sort((a, b) =>{
-        if (a.toLowerCase() < b.toLowerCase()) return -1;
-        if (a.toLowerCase() > b.toLowerCase()) return 1;
+        a = a.toLowerCase();
+        b = b.toLowerCase();
+        if (a< b) return -1;
+        if (a > b) return 1;
         return 0;
     });
     result.push(arr[0]);
