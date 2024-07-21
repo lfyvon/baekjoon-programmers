@@ -1,11 +1,9 @@
 const [T, ...N] = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(Number);
 const result = [];
 for(let i = 0; i < T; i++){
-    let m = 5;
     let count = 0;
-    while(m <= N[i]){
-        count += Math.floor(N[i] / m);
-        m *= 5;
+    for(let j = 5; j <= N[i]; j *= 5){
+        count += Math.floor(N[i] / j);
     }
     result.push(count);
 }
