@@ -6,7 +6,7 @@ for(let i = 2; i <= N; i++){
     if(!primeList[i]){
         for(let j = i; j <= N; j += i){
             if(j % i === 0){
-                primeList[j] = Math.max(primeList[j], i);
+                primeList[j] = i;
             }
         }
     }
