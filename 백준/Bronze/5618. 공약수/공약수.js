@@ -1,13 +1,18 @@
 const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n');
 const N = Number(input[0]);
-const arr = input[1].split(" ").map(Number);
-let result = [1];
-let min = Math.min(...arr);
-for(let i = 2; i <= min; i++){
-    let check = true;
-    for(let j = 0; j < N; j++){
-        if(arr[j] % i) check = false;
+const arr = input[1].split(" ").map(Number).sort((a, b) => a - b);
+let result = new Set();
+for(let i = 1; i * i <= arr[0]; i++){
+    if(arr[0] % i === 0){
+        result.add(i);
+        result.add(arr[0] / i);
     }
-    if(check) result.push(i);
 }
-console.log(result.join("\n"));
+
+for(let i = 0; i < N; i++){
+    for(let x of result){
+        if(arr[i] % x) result.delete(x);
+    }
+}
+
+console.log([...result].sort((a, b) => a - b).join("\n"));
