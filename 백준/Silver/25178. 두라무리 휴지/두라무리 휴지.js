@@ -1,0 +1,10 @@
+const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n').map(el => el.trim());
+const N = Number(input[0]);
+let check = true;
+const regex = /[aeiou]/g;
+const A = input[1];
+const B = input[2];
+if(A.split("").sort().join("") !== B.split("").sort().join("")) check = false;
+if(A[0] !== B[0] || A[N - 1] !== B[N - 1]) check = false;
+if (A.replace(regex, '') !== B.replace(regex, '')) check = false;
+console.log(check ? "YES" : "NO");
