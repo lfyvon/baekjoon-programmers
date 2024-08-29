@@ -10,6 +10,7 @@ while(count < T){
     const arr = [];
     for(let i = 0; i < N * 2; i++){
         if(!P[i]) continue;
+        if(arr.length === N) break;
         for(let j = i + 1; j < N * 2; j++){
             if(P[i] === P[j] * 0.75){
                 arr.push(P[i]);
