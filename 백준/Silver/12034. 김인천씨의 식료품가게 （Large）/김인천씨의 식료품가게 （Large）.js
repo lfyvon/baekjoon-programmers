@@ -15,6 +15,7 @@ while(count < T){
                 arr.push(P[i]);
                 P[i] = 0;
                 P[j] = 0;
+                break;
             }
         }
     }
