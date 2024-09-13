@@ -43,6 +43,6 @@ const morseCode = {
     "..--..": "?",
     "---...": ":",
     "-....-": "-",
-    ".--.-.": "@",
+    ".--.-.": "@"
 }
 console.log(morse.map(el => morseCode[el]).join(""));
