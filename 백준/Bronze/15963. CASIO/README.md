@@ -1,14 +1,18 @@
-# [Bronze IV] CASIO - 15963 
+# [Bronze V] CASIO - 15963 
 
 [문제 링크](https://www.acmicpc.net/problem/15963) 
 
 ### 성능 요약
 
-메모리: 9324 KB, 시간: 120 ms
+메모리: 31120 KB, 시간: 32 ms
 
 ### 분류
 
-구현(implementation)
+구현
+
+### 제출 일자
+
+2024년 11월 17일 01:53:09
 
 ### 문제 설명
 
