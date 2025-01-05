@@ -4,17 +4,21 @@
 
 ### 성능 요약
 
-메모리: 9324 KB, 시간: 128 ms
+메모리: 32412 KB, 시간: 36 ms
 
 ### 분류
 
 사칙연산, 구현, 수학, 문자열
 
+### 제출 일자
+
+2025년 1월 6일 00:29:04
+
 ### 문제 설명
 
 <p>화은이는 제3회 SMUPC를 맞이하여 환영의 의미로 "WelcomeToSMUPC"가 반복적으로 적혀 있는 라벨지를 프린트했다. 라벨지에는 공백 없이 글자들이 이어져 있고 "WelcomeToSMUPC"의 마지막 글자인 C 이후에는 W부터 다시 "WelcomeToSMUPC"가 반복된다. <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>번째 글자가 있는 곳까지 라벨지를 자르려 할 때, <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>번째에는 어떤 글자가 있을지 구해보자.</p>
 
-<figure align="center"><img alt="" src="https://github.com/YeonJeans/Saera-Flutter/assets/61380136/8e3f5ef4-cefb-44fc-902f-6cf773086975" style="width: 480px; height: 149px;">
+<figure align="center"><img alt="" src="" style="width: 480px; height: 149px;">
 <figcaption align="center">[ <mjx-container class="MathJax" jax="CHTML" style="font-size: 109%; position: relative;"><mjx-math class="MJX-TEX" aria-hidden="true"><mjx-mi class="mjx-i"><mjx-c class="mjx-c1D441 TEX-I"></mjx-c></mjx-mi></mjx-math><mjx-assistive-mml unselectable="on" display="inline"><math xmlns="http://www.w3.org/1998/Math/MathML"><mi>N</mi></math></mjx-assistive-mml><span aria-hidden="true" class="no-mathjax mjx-copytext">$N$</span></mjx-container>=15 일 때 라벨지를 자르는 위치 ]</figcaption>
 </figure>
 
