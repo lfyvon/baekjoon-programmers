@@ -1,14 +1,18 @@
-# [Bronze IV] Rectangles - 15232 
+# [Bronze V] Rectangles - 15232 
 
 [문제 링크](https://www.acmicpc.net/problem/15232) 
 
 ### 성능 요약
 
-메모리: 9336 KB, 시간: 172 ms
+메모리: 32412 KB, 시간: 36 ms
 
 ### 분류
 
 구현
+
+### 제출 일자
+
+2025년 1월 10일 23:55:48
 
 ### 문제 설명
 
