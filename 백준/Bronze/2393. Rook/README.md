@@ -1,14 +1,18 @@
-# [Bronze IV] Rook - 2393 
+# [Bronze V] Rook - 2393 
 
 [문제 링크](https://www.acmicpc.net/problem/2393) 
 
 ### 성능 요약
 
-메모리: 70348 KB, 시간: 8 ms
+메모리: 32412 KB, 시간: 32 ms
 
 ### 분류
 
-구현(implementation)
+구현
+
+### 제출 일자
+
+2025년 1월 18일 23:40:13
 
 ### 문제 설명
 
