@@ -1,9 +1,6 @@
 const fs = require('fs');
-if (process.platform === "linux") {
-  input = fs.readFileSync(0, "utf-8").toString().trim().split("\n");
-} else {
-  input = fs.readFileSync('./test.txt').toString().trim().split("\n");
-}
+input = fs.readFileSync(process.platform === "linux" ? 0 : './test.txt', "utf-8").toString().trim().split("\n");
+
 let K = Number(input[0]);
 const N = Number(input[1]);
 let time = 210;
