@@ -4,7 +4,7 @@ const result = [];
 let idx = 0;
 
 while(input[idx]){
-    const [n, ...arr] = input[idx++].trim().split(" ").filter(el => el).map(Number);
+    const [n, ...arr] = input[idx++].trim().split(/\s+/).map(Number);
     const num = new Array(n).fill(0);
     num[0] = 1;
     for(let i = 1; i < n; i++){
