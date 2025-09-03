@@ -1,0 +1,1 @@
+console.log('-1\n'.repeat(10000).trim());
